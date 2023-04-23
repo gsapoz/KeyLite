@@ -1,6 +1,6 @@
 # KeyLite
 
-KeyLite is a Chrome extension that makes it easier to read PDF documents using the bionic reading technique. The extension boldens the first three letters of each word and highlights key text, which helps readers quickly identify important information and navigate complex texts. This could work on 
+KeyLite is a Chrome extension that makes it easier to read PDF documents using the bionic reading technique. The extension boldens the first three letters of each word and highlights key text, which helps readers quickly identify important information and navigate complex texts. 
 
 # Getting started
 To install KeyLite, follow these steps:
