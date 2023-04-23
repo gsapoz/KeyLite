@@ -1,3 +1,21 @@
+//background js
+//Check that the current open tab is a pdf file, if so, send message to content side
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+  chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+    var tab = tabs[0];
+    if (tab.url && tab.url.toLowerCase().endsWith(".pdf")) {
+      chrome.tabs.sendMessage(tab.id, { action: "runKeyLite" });
+    }
+  });
+});
+
+// chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+//   if (changeInfo.status == "complete" && tab.url.includes("google.com")) {
+//     chrome.tabs.sendMessage(tabId, { action: "showAlert" });
+//   }
+// });
+
+//contentjs
 // Define a function to bolden the first three letters of each word in a string
 function boldenFirstThreeLetters(str) {
   var words = str.split(" ");
