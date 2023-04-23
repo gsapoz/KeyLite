@@ -13,8 +13,7 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["/assets/js/content.js"],
-      "css": ["/assets/css/content.css"]
+      "js": ["/assets/js/content.js"]
     }
   ]
 }

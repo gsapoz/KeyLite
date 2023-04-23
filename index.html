@@ -3,13 +3,52 @@
   <head>
     <meta charset="utf-8" />
     <title>KeyLite</title>
+
     <link rel="stylesheet" href="/assets/css/content.css" class="stylesheet" />
     <script defer src="/assets/js/content.js"></script>
     <!-- <script defer src="/assets/js/popup.js"></script> -->
   </head>
   <body>
-    <h1>KeyLite</h1>
-    <p></p>
-    <button id="runKeyLite">Run KeyLite</button>
+    <div class="modal">
+      <h1>KeyLite</h1>
+      <form>
+        <div class="fields">
+          <label for="input1">Your Name:</label>
+          <input type="text" id="fullname" name="input1" />
+
+          <label for="colorpicker">Highlight Color:</label>
+          <input
+            type="color"
+            id="colorpicker"
+            name="colorpicker"
+            value="#01974e"
+          />
+
+          <label for="dropdown">Doc Type:</label>
+          <select id="dropdown" name="dropdown">
+            <option value="option1">Auto (Any)</option>
+            <option value="option2">Legal File</option>
+            <option value="option3">Resume</option>
+            <option value="option4">Movie Script</option>
+            <option value="option4">Book</option>
+          </select>
+        </div>
+      </form>
+
+      <button id="submit">Open Your PDF</button>
+      <button id="submit">Update Your PDF</button>
+
+      <!-- <button id="disclaimer">Privacy Policy</button> -->
+
+      <div class="privacy">
+        <p style="display: none">
+          KeyLite doesn't save or store user information, document contents, or
+          any other data entered into the application. All data is processed
+          locally within the user's browser and is never transmitted to our
+          servers or any third-party services. Therefore, once you submit this
+          prompt, you will need to fill out this form field again.
+        </p>
+      </div>
+    </div>
   </body>
 </html>

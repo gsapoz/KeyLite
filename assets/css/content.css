@@ -1,21 +1,53 @@
+@font-face {
+  font-family: "Bruno Ace";
+  src: url("/assets/fonts/Bruno_Ace/BrunoAce-Regular.ttf") format("truetype");
+}
+
 body {
-  width: 224px;
-  background: #343641;
-  height: 250px;
+  width: 225px;
+  background: black;
+  height: 324px;
+  font-family: "Bruno Ace", cursive;
+  margin: 1px;
+}
+
+body .modal {
+  background: -webkit-linear-gradient(200deg, #515353 20%, #1c2023 93%);
+  height: 100%;
+  display: grid;
 }
 
 h1 {
-  border: 1px solid green;
-  width: 80%;
-  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
-  margin: auto;
   text-align: center;
   font-size: 42px;
+  color: #ffffff;
 }
 
-p {
-  border: 1px solid red;
-  padding: 15px;
-  width: 80%;
-  margin: auto;
+button {
+  height: 30px;
+  width: 100%;
+  cursor: pointer;
+}
+
+label {
+  width: 50%;
+  color: rgb(226, 226, 226);
+}
+
+#doctype {
+  width: 62%;
+}
+
+#color {
+}
+
+#disclaimer {
+  background: #515353;
+  margin-top: 50px;
+}
+
+form .fields {
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
