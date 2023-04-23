@@ -1,0 +1,18 @@
+{
+  "name": "KeyLite",
+  "version": "1.0",
+
+  "manifest_version": 3,
+  "description": "Make Reading PDFs Easy and Efficient with Bionic Reading",
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["/assets/js/content.js"],
+      "css": ["/assets/css/content.css"]
+    }
+  ]
+}

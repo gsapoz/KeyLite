@@ -1,5 +1,3 @@
-console.log(window.chrome);
-
 // Define a function to bolden the first three letters of each word in a string
 function boldenFirstThreeLetters(str) {
   var words = str.split(" ");
