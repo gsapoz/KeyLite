@@ -1,3 +1,17 @@
+let btnOpen = document.getElementById("openPDF");
+btnOpen.addEventListener("click", () => {
+  let input = document.createElement("input");
+  input.type = "file";
+  input.accept = "application/pdf";
+  input.click();
+
+  input.addEventListener("change", () => {
+    let file = input.files[0];
+    let url = URL.createObjectURL(file);
+    window.open(url, "_blank");
+  });
+});
+
 // Define a function to bolden the first three letters of each word in a string
 function boldenFirstThreeLetters(str) {
   var words = str.split(" ");

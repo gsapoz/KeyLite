@@ -8,7 +8,7 @@
   "description": "Make Reading Legal Files Fun, Easy and Efficient",
   "permissions": ["activeTab", "tabs", "storage", "webRequest"],
   "background": {
-    "service_worker": "/background.js"
+    "service_worker": "background.js"
   },
   "content_scripts": [
     {
