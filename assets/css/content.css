@@ -3,51 +3,128 @@
   src: url("/assets/fonts/Bruno_Ace/BrunoAce-Regular.ttf") format("truetype");
 }
 
+html {
+  background: black;
+}
+
 body {
   width: 225px;
-  background: black;
-  height: 324px;
-  font-family: "Bruno Ace", cursive;
+  background: -webkit-linear-gradient(200deg, #515353 20%, #1c2023 93%);
   margin: 1px;
 }
 
 body .modal {
-  background: -webkit-linear-gradient(200deg, #515353 20%, #1c2023 93%);
   height: 100%;
-  display: grid;
+  padding: 10px;
+}
+
+/* Three  core Modal Sections: h1, form, submit */
+
+h1,
+form {
+  font-family: "Bruno Ace", cursive;
 }
 
 h1 {
   text-align: center;
-  font-size: 42px;
+  font-size: 35px;
   color: #ffffff;
+  height: 40px;
 }
 
-button {
-  height: 30px;
-  width: 100%;
+form {
+  height: 160px;
+  color: rgb(236, 248, 249);
+  border-top: 1px outset black;
+  border-bottom: 1px solid outset black;
+}
+
+.submit {
+  height: 100px;
+  margin-top: 20px;
+  padding: 0px;
+}
+
+/* One "Footer" Section, the Privacy Policy Container */
+.policy {
+  overflow: hidden;
+  transition: height 0.3s ease;
+  grid-template-rows: 1fr auto;
+  display: grid;
+  height: 50px;
+}
+
+/* Six Core UI Components: 
+Keyword Selector, Highlight Color, Doc Type Selector, 
+Privacy Policy Toggler, and Two Submit Buttons. */
+
+form select,
+form input,
+.submit button,
+.policy .toggle {
   cursor: pointer;
 }
 
-label {
-  width: 50%;
-  color: rgb(226, 226, 226);
+/* Section 2: Form Fields */
+form .field {
+  height: 47px;
+  margin: 3px;
+  display: flex;
+  align-items: center;
 }
 
-#doctype {
-  width: 62%;
+form .field label {
+  float: left;
+  width: 40%;
+  font-size: 11px;
 }
 
-#color {
+form .field input[type="color"],
+form .field input[type="text"],
+select {
+  padding: 5px;
+  background: rgb(45, 44, 44);
+  color: white;
 }
 
-#disclaimer {
-  background: #515353;
-  margin-top: 50px;
+form .field input[type="color"],
+select {
+  width: 60%;
+  float: right;
 }
 
-form .fields {
+form .field input[type="text"] {
   width: 100%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+}
+
+/* Section 3: Form Submission */
+.submit button {
+  width: 100%;
+  height: 30px;
+}
+
+.submit button {
+  background: -webkit-linear-gradient(200deg, #e50c0c 20%, #a10fd6 93%);
+  margin: 3px;
+  color: white;
+}
+
+.submit .inactive {
+  background: transparent;
+  /* pointer-events: none; */
+  cursor: not-allowed;
+}
+
+/* Section 4: Privacy Policy Toggle */
+.policy .toggle {
+  text-align: center;
+  background: rgb(45, 44, 44);
+  color: rgb(236, 248, 249);
+  height: 50px;
+  /* border: 1px solid yellow; */
+}
+
+.policy p {
+  display: none;
+  margin: 0;
 }
