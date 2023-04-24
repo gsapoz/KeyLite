@@ -14,19 +14,28 @@ async function extractPdfText(pdfUrl) {
 
   // Concatenate the text content of all pages
   let text = textContent
-    .map((content) => content.items.map((item) => item.str).join(""))
+    .map((content) => content.items.map((item) => item.str).join(" "))
     .join("");
 
   // Return the extracted text
   return text;
 }
 
-function createPageFromText(text) {
-  // Add line breaks where necessary
-  // text = text.replace(/(?<!\S)[A-Z]+(?=\s|$)/g, "$&\n");
-  // alert(text)
+function compileArrayFromText(text) {
+  const regex = /[^\w\s\.\,\-\(\)]/g;
+  text = text.replace(regex, "");
+  alert(text);
+}
 
+function createPageFromText(text) {
+  const regex = /[^\w\s\.\,\-\(\)]/g;
+  text = text.replace(regex, "");
+
+  // text = splitIntoSentences(text)
+  text = removeHyphens(text);
   text = boldenFirstThreeLetters(text);
+  text = highlightKeyText(text);
+
   // Create a new HTML document
   const html = `
     <html>
@@ -37,11 +46,11 @@ function createPageFromText(text) {
         <p>${text}</p>
         <style>
           html {
-            background: darkgrey;    
+            background: darkgrey;
           }
           body {
             background: ghostwhite;
-            height: 200vh; 
+            
             width: 84%;
             margin: auto;
             margin-top: 65px;
@@ -49,7 +58,7 @@ function createPageFromText(text) {
             border: 1px solid black;
             border-radius: 5px;
           }
-          p { 
+          p {
             font-size:25px;
           }
         </style>

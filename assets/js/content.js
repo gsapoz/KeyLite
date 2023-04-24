@@ -12,11 +12,6 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
   if (currentPathname.toLocaleLowerCase().endsWith(".pdf")) {
     btnOpen.classList.add("inactive");
     btnUpdate.addEventListener("click", () => {
-      // Register Form Values
-      const doctype = document.getElementById("docType").value;
-      const highlightcolor = document.getElementById("colorpicker").value;
-      const searchstring = document.getElementById("search").value;
-
       // Call the extractPdfText function with the PDF file URL
       extractPdfText(currentUrl)
         .then((text) => {
@@ -37,11 +32,6 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
       input.addEventListener("change", () => {
         let file = input.files[0];
         let url = URL.createObjectURL(file);
-
-        // Register Form Values
-        const doctype = document.getElementById("docType").value;
-        const highlightcolor = document.getElementById("colorpicker").value;
-        const searchstring = document.getElementById("search").value;
 
         // Get the original file name and append it to the URL
         let fileName = file.name;

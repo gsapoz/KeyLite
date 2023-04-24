@@ -13,11 +13,53 @@ function boldenFirstThreeLetters(str) {
 }
 
 // Define a function to highlight key text in a string
-function highlightKeyText(str, keywords, color) {
-  var pattern = new RegExp(keywords.join("|"), "gi");
-  return str.replace(pattern, function (match) {
-    return '<span style="background-color:' + color + ';">' + match + "</span>";
+function highlightKeyText(text) {
+  // Register Form Values
+  const doctype = document.getElementById("docType").value;
+  const highlightcolor = document.getElementById("colorpicker").value;
+  const searchstring = document.getElementById("search").value;
+
+  //   var pattern = new RegExp(keywords.join("|"), "gi");
+  //   return text.replace(pattern, function (match) {
+  //     return '<span style="background-color:' + color + ';">' + match + "</span>";
+  //   });
+
+  // Create a regular expression to match capitalized words
+  const pattern = /\b[A-Z]+\b/g;
+
+  // Replace each capitalized word with a highlighted version
+  return text.replace(pattern, function (match) {
+    return (
+      '<span style="background-color:' +
+      highlightcolor +
+      ';">' +
+      match +
+      "</span>"
+    );
   });
+}
+
+function splitIntoSentences(text) {
+  // Define the regular expression to split the text into sentences
+  const regex = /(?<=[.?!])\s+/;
+
+  // Use the regular expression to split the text into sentences
+  const sentences = text.split(regex);
+
+  return sentences.join("\n");
+
+  //   // Return the array of sentences
+  //   return sentences;
+}
+
+function removeHyphens(text) {
+  // Split the input text into words
+  const words = text.split(/\s+/);
+
+  // Remove hyphens from each word and join them back together
+  const newText = words.map((word) => word.replace(/-/g, "")).join(" ");
+
+  return newText;
 }
 
 // Define the main function that runs when the KeyLite button is clicked
