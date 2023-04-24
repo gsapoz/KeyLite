@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/assets/css/content.css" class="stylesheet" />
     
     <script src="dependencies/pdfjs-dist/build/pdf.js"></script>
+     <script defer src="/assets/js/helpers.js"></script>
+     <script defer src="/assets/js/keylite.js"></script>
     <script defer src="/assets/js/content.js"></script>
   </head>
   <body>
@@ -15,13 +17,13 @@
         <form>
             <div class="field">
                 <label for="dropdown">Doc Type</label>
-                <select id="dropdown" name="dropdown">
-                    <option value="option1">Auto (Any)</option>
-                    <option value="option2">Legal File</option>
-                    <option value="option4">Itinerary</option>
-                    <option value="option3">Resume</option>
-                    <option value="option4">Movie Script</option>
-                    <option value="option4">E-Book</option>
+                <select id="docType" name="dropdown">
+                    <option value="auto">Auto (Any)</option>
+                    <option value="legal">Legal File</option>
+                    <option value="itinerary">Itinerary</option>
+                    <option value="resume">Resume</option>
+                    <option disabled value="ebook">E-Book</option>
+                    <option disabled value="script">Playscript</option>
                 </select>
             </div>
 
