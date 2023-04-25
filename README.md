@@ -37,6 +37,10 @@ KeyLite is licensed under the Apache 2.0 License. See the LICENSE file for more 
 
 The Apache 2.0 license is a permissive open-source license that allows users to freely use, modify, and distribute the software, as long as they include a copy of the license with any distributions or modifications. It also includes some patent protections and indemnification clauses. For more information about the Apache 2.0 license, please visit https://www.apache.org/licenses/LICENSE-2.0.
 
+# Acknowledgements
+
+Mozilla/pdf.js - Apache License 2.0 | https://github.com/mozilla/pdf.js
+
 # Contact
 
 If you have any questions or feedback about KeyLite, please email us at gtech235@gmail.com
