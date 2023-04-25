@@ -61,7 +61,7 @@ Privacy Policy Toggler, and Two Submit Buttons. */
 form select,
 form input,
 .submit button,
-.policy .toggle,
+.policy #toggle,
 h1 {
   cursor: pointer;
 }
@@ -118,7 +118,7 @@ form .field input[type="text"] {
 }
 
 /* Section 4: Privacy Policy Toggle */
-.policy .toggle {
+.policy #toggle {
   text-align: center;
   background: rgb(45, 44, 44);
   color: rgb(236, 248, 249);

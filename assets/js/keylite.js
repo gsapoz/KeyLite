@@ -39,29 +39,6 @@ function highlightKeyText(text) {
   });
 }
 
-function splitIntoSentences(text) {
-  // Define the regular expression to split the text into sentences
-  const regex = /(?<=[.?!])\s+/;
-
-  // Use the regular expression to split the text into sentences
-  const sentences = text.split(regex);
-
-  return sentences.join("\n");
-
-  //   // Return the array of sentences
-  //   return sentences;
-}
-
-function removeHyphens(text) {
-  // Split the input text into words
-  const words = text.split(/\s+/);
-
-  // Remove hyphens from each word and join them back together
-  const newText = words.map((word) => word.replace(/-/g, "")).join(" ");
-
-  return newText;
-}
-
 // Define the main function that runs when the KeyLite button is clicked
 function runKeyLite() {
   var boldColor = "#000";

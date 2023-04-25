@@ -1,6 +1,7 @@
-// Declare Form Submit Buttons
+// Declare Form Submit and UI Buttons
 let btnOpen = document.getElementById("openPDF");
 let btnUpdate = document.getElementById("updatePDF");
+let btnToggle = document.getElementById("toggle");
 
 chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
   // Get the URL of the current tab
@@ -49,3 +50,14 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
     });
   }
 });
+
+// btnToggle.addEventListener("click", () => {
+//   let disclaimer = document.getElementById("text");
+//   if (disclaimer.style.display === "none") {
+//     disclaimer.style.display = "block";
+
+//     // alert("ayo");
+//   } else {
+//     disclaimer.style.display = "none";
+//   }
+// });
