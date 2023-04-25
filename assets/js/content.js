@@ -51,13 +51,6 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
   }
 });
 
-// btnToggle.addEventListener("click", () => {
-//   let disclaimer = document.getElementById("text");
-//   if (disclaimer.style.display === "none") {
-//     disclaimer.style.display = "block";
-
-//     // alert("ayo");
-//   } else {
-//     disclaimer.style.display = "none";
-//   }
-// });
+btnToggle.addEventListener("click", () => {
+  openPrivacyPolicy();
+});
